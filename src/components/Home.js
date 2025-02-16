@@ -29,7 +29,7 @@ function Home() {
               mobilizing their full potential in the fields of
               <br></br>
               <Link className="dropdown-item" to="/about">
-                About Us
+                Read More
               </Link>
             </p>
 
@@ -37,31 +37,35 @@ function Home() {
             <div class="row">
               {/* drinking water column */}
               <div class="col-sm-6 mb-3 mb-sm-0">
-                <div class="card">
+                <div class="card px-4">
                   <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
+                    <h5 class="card-title">Drinking Water</h5>
                     <p class="card-text">
-                      With supporting text below as a natural lead-in to
-                      additional content.
+                      Providing clean and safe drinking water to communities,
+                      ensuring access to this basic necessity for all ...
                     </p>
-                    <a href="#" class="btn btn-primary">
-                      Go somewhere
-                    </a>
+                    <img
+                      src="images/home/drinkingWater.jpg"
+                      class="rounded w-100 me-4"
+                      alt="..."
+                    ></img>
                   </div>
                 </div>
               </div>
               {/* electricity column */}
               <div class="col-sm-6">
-                <div class="card">
+                <div class="card px-4">
                   <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
+                    <h5 class="card-title">Electircity Generation</h5>
                     <p class="card-text">
-                      With supporting text below as a natural lead-in to
-                      additional content.
+                      Generating renewable energy through sustainable practices,
+                      ensuring a reliable and eco-friendly ...
                     </p>
-                    <a href="#" class="btn btn-primary">
-                      Go somewhere
-                    </a>
+                    <img
+                      src="images/home/electricity.jpg"
+                      class="rounded w-100 me-4"
+                      alt="..."
+                    ></img>
                   </div>
                 </div>
               </div>
@@ -70,17 +74,38 @@ function Home() {
         </div>
 
         {/* news column */}
-        <div className="col-3 border-start border-3 gx-0">
-          <div class="container text  mt-5 d-flex justify-content-between align-items-center">
-            <h2>
-              <img
-                src="images/home/news.svg"
-                class="rounded w-25 me-4"
-                alt="..."
-              ></img>
-              <span></span>
-              Latest News :
-            </h2>
+        <div className="col-3 border-start border-3 gx-0 px-4">
+          <div class="container text  mt-5">
+            <div className="row">
+              <div className="col-12">
+                <h2>
+                  <img
+                    src="images/home/news.svg"
+                    class="rounded w-25 me-4"
+                    alt="..."
+                  ></img>
+                  Latest News :
+                </h2>
+              </div>
+            </div>
+
+            <div className="row">
+              <div className="col-12">
+                <div class="card bg-teritary">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      कर्णाली जलश्रोत लिमिटेड आठौं वार्षिक २०७९|०८|१०
+                    </h5>
+                    <p class="card-text">notice date- 12, Dec 2022</p>
+                    <p>
+                      The annual board meeting of Karnali Jalashrot Limited will
+                      be held on 10th December 2022. All shareholders are
+                      requested to attend the meeting.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

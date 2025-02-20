@@ -36,13 +36,13 @@ function Home() {
             {/* features */}
             <div class="row">
               {/* drinking water column */}
-              <div class="col-sm-6 mb-3 mb-sm-0">
+              <div class="col-6 mt-3">
                 <div class="card px-4">
                   <div class="card-body">
                     <h5 class="card-title">Drinking Water</h5>
                     <p class="card-text">
                       Providing clean and safe drinking water to communities,
-                      ensuring access to this basic necessity for all ...
+                      ensuring access to this basic ...
                     </p>
                     <img
                       src="images/home/drinkingWater.jpg"
@@ -52,8 +52,8 @@ function Home() {
                   </div>
                 </div>
               </div>
-              {/* electricity column */}
-              <div class="col-sm-6">
+              {/* 2. electricity column */}
+              <div class="col-sm-6 mt-3">
                 <div class="card px-4">
                   <div class="card-body">
                     <h5 class="card-title">Electircity Generation</h5>
@@ -62,7 +62,75 @@ function Home() {
                       ensuring a reliable and eco-friendly ...
                     </p>
                     <img
-                      src="images/home/electricity.jpg"
+                      src="images/home/hydro.jpg"
+                      class="rounded w-100 me-4v h-50"
+                      alt="..."
+                    ></img>
+                  </div>
+                </div>
+              </div>
+              {/* 3. Irrigation column */}
+              <div class="col-sm-6 mt-4">
+                <div class="card px-4">
+                  <div class="card-body">
+                    <h5 class="card-title">Irrigation</h5>
+                    <p class="card-text">
+                      Generating renewable energy through sustainable practices,
+                      ensuring a reliable and eco-friendly ...
+                    </p>
+                    <img
+                      src="images/home/irrigation.jpg"
+                      class="rounded w-100 me-4"
+                      alt="..."
+                    ></img>
+                  </div>
+                </div>
+              </div>
+              {/* 4. Recreation column */}
+              <div class="col-sm-6 mt-4">
+                <div class="card px-4">
+                  <div class="card-body">
+                    <h5 class="card-title">Recreation</h5>
+                    <p class="card-text">
+                      Generating renewable energy through sustainable practices,
+                      ensuring a reliable and eco-friendly ...
+                    </p>
+                    <img
+                      src="images/home/recreation.jpg"
+                      class="rounded w-100 me-4"
+                      alt="..."
+                    ></img>
+                  </div>
+                </div>
+              </div>
+              {/* 5. Fisheries column */}
+              <div class="col-sm-6 mt-4">
+                <div class="card px-4">
+                  <div class="card-body">
+                    <h5 class="card-title">Fisheries</h5>
+                    <p class="card-text">
+                      Generating renewable energy through sustainable practices,
+                      ensuring a reliable and eco-friendly ...
+                    </p>
+                    <img
+                      src="images/home/fishery.jpg"
+                      class="rounded w-100 me-4"
+                      alt="..."
+                    ></img>
+                  </div>
+                </div>
+              </div>
+              {/* 6. Navigation column */}
+              <div class="col-sm-6 mt-4">
+                <div class="card px-4">
+                  <div class="card-body">
+                    <h5 class="card-title">Navigation</h5>
+                    <p class="card-text">
+                      Generating renewable energy through sustainable practices,
+                      ensuring a reliable and eco-friendly ...
+                    </p>
+                    <img
+                      src="images/home/navigation.jpg"
                       class="rounded w-100 me-4"
                       alt="..."
                     ></img>
@@ -90,17 +158,73 @@ function Home() {
             </div>
 
             <div className="row">
-              <div className="col-12">
-                <div class="card bg-teritary">
+              {/* news 1 */}
+              <div className="col-12 mb-4">
+                <div class="card bg-teritary text-start">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      कर्णाली जलश्रोत लिमिटेड सौर्य दैनिक
+                    </h5>
+                    <span>notice date: Jan 6, 2025</span>
+                    <p>Click here to download the daily report.</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* news 2 */}
+              <div className="col-12 mb-4">
+                <div class="card bg-teritary text-start">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      कर्णाली जलश्रोत लिमिटेड सौर्य दैनिक
+                    </h5>
+                    <p class="card-text">notice date: Sept 5, 2024</p>
+                    <p>Related to share ...</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* news 3 */}
+              <div className="col-12 mb-4">
+                <div class="card bg-teritary text-start">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      कर्णाली जलश्रोत लिमिटेड सौर्य दैनिक २०८० मंसिर २८
+                    </h5>
+                    <p class="card-text">notice date: Dec 14, 2023</p>
+                    <p>Related to share ...</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* news 4 */}
+              <div className="col-12 mb-4">
+                <div class="card bg-teritary text-start">
                   <div class="card-body">
                     <h5 class="card-title">
                       कर्णाली जलश्रोत लिमिटेड आठौं वार्षिक २०७९|०८|१०
                     </h5>
-                    <p class="card-text">notice date- 12, Dec 2022</p>
+                    <span>notice date: Dec 12, 2022</span>
                     <p>
                       The annual board meeting of Karnali Jalashrot Limited will
                       be held on 10th December 2022. All shareholders are
-                      requested to attend the meeting.
+                      requested to attend the meeting ...
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* news 5 */}
+              <div className="col-12 mb-4">
+                <div class="card bg-teritary text-start">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      कर्णाली जलश्रोत लिमिटेड आठौं वार्षिक २०७९|०८|१०
+                    </h5>
+                    <p class="card-text">notice date: Jan 17, 2013</p>
+                    <p>
+                      TWe maintain our standart in what we do and we plan ahead
+                      for. We plan ahead ...
                     </p>
                   </div>
                 </div>

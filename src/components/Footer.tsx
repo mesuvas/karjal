@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Footer() {
+const Footer: React.FC = () => {
   return (
-    <footer className=" text-white py-4" style={{ backgroundColor: "#006EB9" }}>
+    <footer className="text-white py-4" style={{ backgroundColor: "#006EB9" }}>
       <div className="container-footer">
         <div className="row">
           <div className="col-md-3">
@@ -12,7 +12,6 @@ function Footer() {
           </div>
           <div className="col-3 text-start gx-0">
             <h5>Quick Links</h5>
-
             <div className="container-fluid">
               <div className="row">
                 <div className="col-6">
@@ -37,9 +36,9 @@ function Footer() {
                         Documents
                       </Link>
                     </li>
-                  </ul>{" "}
+                  </ul>
                 </div>
-                <div className="col-6 ">
+                <div className="col-6">
                   <ul className="list-unstyled">
                     <li>
                       <Link className="text-white" to="/drinking-water">
@@ -76,11 +75,11 @@ function Footer() {
               </div>
             </div>
           </div>
-          <div className="col-md-3 ">
+          <div className="col-md-3">
             <h5>Our Services</h5>
             <div className="container-fluid">
               <div className="row">
-                <div className="col-6 ">
+                <div className="col-6">
                   <ul className="list-unstyled">
                     <li>
                       <Link className="text-white" to="/electricity-generation">
@@ -152,6 +151,6 @@ function Footer() {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

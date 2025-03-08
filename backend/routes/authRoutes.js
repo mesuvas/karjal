@@ -54,4 +54,16 @@ router.put("/news/:id", async (req, res) => {
     res.status(400).json({ error: error.message });
   }
 });
+
+// Delete News by ID
+router.delete("/news/:id", async (req, res) => {
+  try {
+    const deletedNews = await News.findByIdAndDelete(req.params.id);
+    if (!deletedNews) return res.status(404).json({ error: "News not found" });
+    res.json({ message: "News deleted successfully" });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 module.exports = router;

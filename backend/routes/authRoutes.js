@@ -42,4 +42,16 @@ router.get("/news/:id", async (req, res) => {
   }
 });
 
+// Update News by ID
+router.put("/news/:id", async (req, res) => {
+  try {
+    const updatedNews = await News.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+    });
+    if (!updatedNews) return res.status(404).json({ error: "News not found" });
+    res.json(updatedNews);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+});
 module.exports = router;

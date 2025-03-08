@@ -31,4 +31,15 @@ router.get("/news", async (req, res) => {
   }
 });
 
+// Read Single News by ID
+router.get("/news/:id", async (req, res) => {
+  try {
+    const news = await News.findById(req.params.id);
+    if (!news) return res.status(404).json({ error: "News not found" });
+    res.json(news);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 module.exports = router;

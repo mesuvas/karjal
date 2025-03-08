@@ -21,4 +21,14 @@ router.post("/news", async (req, res) => {
   }
 });
 
+// Read All News
+router.get("/news", async (req, res) => {
+  try {
+    const newsList = await News.find();
+    res.json(newsList);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 module.exports = router;

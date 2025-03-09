@@ -1,24 +1,33 @@
-const News = require("../models/News");
+const News = require("../models/newsModel");
 
 // Create News
+
 exports.createNews = async (req, res) => {
-  try {
-    const news = new News(req.body);
-    await news.save();
-    res.status(201).json(news);
-  } catch (error) {
-    res.status(400).json({ error: error.message });
-  }
+  console.log("Create News Route Hit");
+  res.send("Auth Route");
 };
+// exports.createNews = async (req, res) => {
+//   res.send("Auth Route");
+
+//   try {
+//     const news = new News(req.body);
+//     await news.save();
+//     res.status(201).json(news);
+//   } catch (error) {
+//     res.status(400).json({ error: error.message });
+//   }
+// };
 
 // Read All News
 exports.getAllNews = async (req, res) => {
-  try {
-    const newsList = await News.find();
-    res.json(newsList);
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
+  res.send("news Route");
+
+  //   try {
+  //     const newsList = await News.find();
+  //     res.json(newsList);
+  //   } catch (error) {
+  //     res.status(500).json({ error: error.message });
+  //   }
 };
 
 // Read Single News by ID

@@ -3,6 +3,9 @@ const newsController = require("../controllers/newsController");
 
 const router = express.Router();
 
+// router.get("/", (req, res) => {
+//   res.send("news Route");
+// });
 // Create News
 router.post("/news", newsController.createNews);
 

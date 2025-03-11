@@ -2,7 +2,7 @@ const News = require("../models/newsModel");
 
 // Create News
 exports.createNews = async (req, res) => {
-  res.send("Auth Route");
+  res.send("News created");
 
   try {
     const news = new News(req.body);

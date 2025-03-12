@@ -1,13 +1,13 @@
 const express = require("express");
 const newsController = require("../controllers/newsController");
-const News = require("../models/newsModel");
 const router = express.Router();
+const upload = require("../middleware/multerConfig"); // Import multer middleware
 
 // router.get("/", (req, res) => {
 //   res.send("news Route");
 // });
 // Create News
-router.post("/news", newsController.createNews);
+router.post("/news", upload.single("file"), newsController.createNews);
 
 // Read All News
 router.get("/news", newsController.getAllNews);

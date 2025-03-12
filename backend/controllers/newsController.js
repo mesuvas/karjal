@@ -3,8 +3,6 @@ const News = require("../models/newsModel");
 // Create News
 const createNews = async (req, res) => {
   try {
-    console.log("Request Body:", req.body);
-    console.log("Request File:", req.file);
     const news = new News({
       title: req.body.title,
       noticedate: req.body.noticedate,

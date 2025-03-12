@@ -3,9 +3,17 @@ const News = require("../models/newsModel");
 // Create News
 const createNews = async (req, res) => {
   try {
-    const news = new News(req.body);
+    console.log("Request Body:", req.body);
+    console.log("Request File:", req.file);
+    const news = new News({
+      title: req.body.title,
+      noticedate: req.body.noticedate,
+      description: req.body.description,
+      file: req.file.path, // The file path saved by multer
+    });
+
     await news.save();
-    res.status(201).json(news); // Only send the response after saving
+    res.status(201).json(news);
   } catch (error) {
     res.status(400).json({ error: error.message });
   }

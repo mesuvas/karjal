@@ -2,12 +2,10 @@ const News = require("../models/newsModel");
 
 // Create News
 const createNews = async (req, res) => {
-  res.send("News created");
-
   try {
     const news = new News(req.body);
     await news.save();
-    res.status(201).json(news);
+    res.status(201).json(news); // Only send the response after saving
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
@@ -15,7 +13,6 @@ const createNews = async (req, res) => {
 
 const getAllNews = async (req, res) => {
   try {
-    console.log("GET /news route hit");
     const news = await News.find();
     if (!news.length) {
       return res.status(404).json({ success: false, message: "No news found" });

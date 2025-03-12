@@ -13,21 +13,23 @@ exports.createNews = async (req, res) => {
   }
 };
 
-exports.getAllNews = async (req, res) => {
-  try {
-    console.log("GET /news route hit");
-    const news = await News.find();
-    if (!news.length) {
-      return res.status(404).json({ success: false, message: "No news found" });
-    }
-    res.status(200).json({ success: true, data: news });
-  } catch (error) {
-    console.error("Error fetching news:", error);
-    res
-      .status(500)
-      .json({ success: false, message: "Server Error", error: error.message });
-  }
-};
+// const getAllNews = async (req, res) => {
+//   try {
+//     console.log("GET /news route hit");
+//     const news = await News.find();
+//     if (!news.length) {
+//       return res.status(404).json({ success: false, message: "No news found" });
+//     }
+//     res.status(200).json({ success: true, data: news });
+//   } catch (error) {
+//     console.error("Error fetching news:", error);
+//     res
+//       .status(500)
+//       .json({ success: false, message: "Server Error", error: error.message });
+//   }
+// };
+
+// module.exports = { getAllNews}
 
 // Read Single News by ID
 exports.getNewsById = async (req, res) => {

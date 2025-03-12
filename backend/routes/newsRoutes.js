@@ -10,16 +10,7 @@ const router = express.Router();
 router.post("/news", newsController.createNews);
 
 // Read All News
-router.get("/news", async (req, res) => {
-  try {
-    const news = await News.find(); // Fetch all news from the database
-    res.status(200).json({ success: true, data: news });
-  } catch (error) {
-    res
-      .status(500)
-      .json({ success: false, message: "Server Error", error: error.message });
-  }
-});
+router.get("/news", newsController.getAllNews);
 
 // Read Single News by ID
 router.get("/news/:id", newsController.getNewsById);

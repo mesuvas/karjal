@@ -16,7 +16,7 @@ connectDB();
 
 // Routes
 app.use("/api/auth", authRoutes);
-app.use("/api/news", newsRoutes);
+app.use("/api", newsRoutes);
 
 // Start Server
 const PORT = process.env.PORT || 5000;

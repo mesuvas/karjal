@@ -1,24 +1,13 @@
 const express = require("express");
 const newsController = require("../controllers/newsController");
 const router = express.Router();
-const upload = require("../middleware/multerConfig"); // Import multer middleware
+const upload = require("../middleware/multerConfig");
 
-// router.get("/", (req, res) => {
-//   res.send("news Route");
-// });
-// Create News
 router.post("/news", upload.single("file"), newsController.createNews);
-
-// Read All News
 router.get("/news", newsController.getAllNews);
-
-// Read Single News by ID
 router.get("/news/:id", newsController.getNewsById);
+router.put("/news/:id", upload.single("file"), newsController.updateNews);
 
-// Update News by ID
-router.put("/news/:id", newsController.updateNews);
-
-// Delete News by ID
 router.delete("/news/:id", newsController.deleteNews);
 
 module.exports = router;

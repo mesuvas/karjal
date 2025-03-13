@@ -46,8 +46,20 @@ const getNewsById = async (req, res) => {
 // Update News by ID
 const updateNews = async (req, res) => {
   try {
-    const updatedNews = await News.findByIdAndUpdate(req.params.id, req.body, {
-      new: true,
+    const newsId = req.params.id;
+    const updatedData = {
+      title: req.body.title,
+      noticedate: req.body.noticedate,
+      description: req.body.description,
+    };
+
+    // If a new file is uploaded, update the file path
+    if (req.file) {
+      updatedData.file = req.file.path;
+    }
+    const updatedNews = await News.findByIdAndUpdate(newsId, updatedData, {
+      new: true, // Return the updated document
+      runValidators: true, // Ensure validations are applied
     });
     if (!updatedNews) return res.status(404).json({ error: "News not found" });
     res.json(updatedNews);

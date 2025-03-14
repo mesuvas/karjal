@@ -66,7 +66,7 @@ const logout = async (req, res) => {
   res.json({ message: "Logged out successfully" });
 };
 
-exports = {
+module.exports = {
   register,
   login,
   refreshToken,

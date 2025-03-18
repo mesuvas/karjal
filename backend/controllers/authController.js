@@ -63,6 +63,7 @@ const refreshToken = async (req, res) => {
 
 const logout = async (req, res) => {
   res.clearCookie("refreshToken");
+
   res.json({ message: "Logged out successfully" });
 };
 
